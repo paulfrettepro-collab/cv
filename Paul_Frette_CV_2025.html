@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Paul Fretté - Data Engineer & Formateur IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333333;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        
+        /* Header avec dégradé violet */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+        
+        .header-right {
+            text-align: right;
+        }
+        
+        .logo-company {
+            height: 50px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .job-title {
+            font-size: 1.4em;
+            font-weight: 400;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            font-size: 1em;
+        }
+        
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Section commune */
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 1.6em;
+            color: #667eea;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Profil */
+        .profile {
+            background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
+        }
+        
+        .profile p {
+            font-size: 1.1em;
+            color: #555555;
+            text-align: justify;
+        }
+        
+        /* Expériences */
+        .experience-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .exp-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .exp-company {
+            color: #764ba2;
+            font-weight: 500;
+        }
+        
+        .exp-date {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .exp-context {
+            color: #555;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .exp-missions h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        
+        .exp-missions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .exp-missions li {
+            padding: 5px 0 5px 25px;
+            position: relative;
+            color: #555;
+        }
+        
+        .exp-missions li::before {
+            content: "▸";
+            color: #667eea;
+            position: absolute;
+            left: 5px;
+        }
+        
+        .exp-tech {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea20, #764ba220);
+            color: #667eea;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .key-figures {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .figure {
+            background: #f0fff4;
+            border: 1px solid #27ae60;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-size: 0.9em;
+        }
+        
+        .figure strong {
+            color: #27ae60;
+        }
+        
+        /* Compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        @media (max-width: 700px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .skill-category {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+        }
+        
+        .skill-category h3 {
+            color: #764ba2;
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        /* Formation */
+        .formation-item {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .formation-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5em;
+            flex-shrink: 0;
+        }
+        
+        .formation-content h3 {
+            color: #333;
+            font-size: 1.1em;
+        }
+        
+        .formation-content p {
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        .cert-item {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .cert-item strong {
+            color: #667eea;
+        }
+        
+        /* Langues */
+        .languages {
+            display: flex;
+            gap: 30px;
+        }
+        
+        .lang-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .lang-flag {
+            font-size: 1.5em;
+        }
+        
+        .lang-level {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.8em;
+        }
+        
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            height: 40px;
+            filter: brightness(0) invert(1);
+            margin-bottom: 10px;
+        }
+        
+        .footer p {
+            opacity: 0.9;
+            font-size: 0.95em;
+        }
+
+        /* Print styles */
+        @media print {
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .header, .footer {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            }
+            .experience-item, .skill-category {
+                box-shadow: none;
+                border: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1>Paul Fretté</h1>
+                    <div class="job-title">🚀 Data Engineer & Formateur IA | 10+ ans d'expérience</div>
+                    <div class="contact-info">
+                        <span>📱 06 76 65 16 54</span>
+                        <span>✉️ paul.frette.pro@gmail.com</span>
+                        <span>📍 France</span>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <img src="https://www.data-inceptio.ai/wp-content/uploads/2025/03/Logo.svg" alt="Data Inceptio.ai" class="logo-company">
+                </div>
+            </div>
+        </header>
+
+        <!-- Profil -->
+        <section class="section profile">
+            <h2 class="section-title">👤 Profil</h2>
+            <p>
+                Data Engineer et Consultant Formateur IA passionné, je combine une expertise technique approfondie en ingénierie de données et intelligence artificielle avec des compétences avérées en formation, conseil et gestion de projet. Fort de 10+ années d'expérience terrain, je conçois des architectures data robustes, développe des agents IA innovants (RAG, LLM) et accompagne les organisations dans leur transformation digitale. Ma capacité à vulgariser des concepts complexes et mon leadership collaboratif me permettent de piloter des projets à forte valeur ajoutée tout en formant les équipes aux dernières technologies.
+            </p>
+        </section>
+
+        <!-- Expériences -->
+        <section class="section">
+            <h2 class="section-title">💼 Expériences Professionnelles</h2>
+
+            <!-- Data Inceptio.ai -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Data Engineer & Consultant Formateur IA</div>
+                        <div class="exp-company">Data Inceptio.ai</div>
+                    </div>
+                    <span class="exp-date">Juillet 2025 - Présent</span>
+                </div>
+                <p class="exp-context">
+                    Poste polyvalent combinant expertise technique en data engineering et IA, gestion de projet, conseil stratégique et formation. Participation à des projets innovants ayant un impact réel sur les organisations clientes.
+                </p>
+                
+                <div class="exp-missions">
+                    <h4>🔧 Ingénierie de Données</h4>
+                    <ul>
+                        <li>Conception et développement de pipelines ETL/ELT scalables (Azure, AWS, GCP)</li>
+                        <li>Administration et optimisation de bases de données (PostgreSQL, MongoDB, Snowflake, BigQuery)</li>
+                        <li>Mise en place de processus automatisés de traitement et monitoring des données</li>
+                    </ul>
+                    
+                    <h4>🤖 Développement d'Agents IA</h4>
+                    <ul>
+                        <li>Conception d'agents IA conversationnels avec LLM (GPT, Claude, LangChain, LlamaIndex)</li>
+                        <li>Implémentation d'architectures RAG (Retrieval-Augmented Generation)</li>
+                        <li>Fine-tuning et optimisation de modèles selon les besoins métiers</li>
+                    </ul>
+                    
+                    <h4>📐 Architecture & Conseil</h4>
+                    <ul>
+                        <li>Design d'architectures data end-to-end (collecte, stockage, traitement, visualisation)</li>
+                        <li>Accompagnement à la transformation digitale et migration cloud</li>
+                        <li>Production de spécifications techniques et documentation d'architecture</li>
+                    </ul>
+                    
+                    <h4>📚 Formation & Transmission</h4>
+                    <ul>
+                        <li>Conception de programmes de formation sur mesure (IA, ML, Data Engineering)</li>
+                        <li>Animation de formations techniques et ateliers pratiques (débutants à experts)</li>
+                        <li>Coaching et accompagnement des équipes dans l'adoption des technologies IA</li>
+                    </ul>
+                </div>
+                
+                <div class="exp-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">LlamaIndex</span>
+                    <span class="tech-tag">OpenAI API</span>
+                    <span class="tech-tag">Azure</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">DBT</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Kubernetes</span>
+                    <span class="tech-tag">MLflow</span>
+                </div>
+            </div>
+
+            <!-- Propriétés Privées -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Analytics Engineer / Data Analyst</div>
+                        <div class="exp-company">Propriétés Privées (Freelance)</div>
+                    </div>
+                    <span class="exp-date">Janvier 2024 - Juin 2025</span>
+                </div>
+                <p class="exp-context">
+                    Mission freelance pour structurer un Référentiel Client Unique à partir de 27 bases PostgreSQL hétérogènes. Création d'un Data Mart structuré pour le marketing automation et lead nurturing.
+                </p>
+                
+                <div class="key-figures">
+                    <div class="figure"><strong>27</strong> bases analysées</div>
+                    <div class="figure"><strong>1,14M</strong> lignes normalisées</div>
+                    <div class="figure"><strong>30 jours</strong> pour livraison</div>
+                </div>
+                
+                <div class="exp-missions">
+                    <ul>
+                        <li>Audit de 27 bases PostgreSQL & mapping des flux de données</li>
+                        <li>Conception modèle étoile & documentation dbt</li>
+                        <li>Pipelines Airflow + tests unitaires</li>
+                        <li>Dashboards interactifs Metabase</li>
+                        <li>Formation des équipes marketing (data literacy)</li>
+                    </ul>
+                </div>
+                
+                <div class="exp-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Metabase</span>
+                    <span class="tech-tag">dbt</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">Git</span>
+                </div>
+            </div>
+
+            <!-- Philips Business Analyst -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Business Analyst IoT / Chef de Produit</div>
+                        <div class="exp-company">Philips Lighting (Signify)</div>
+                    </div>
+                    <span class="exp-date">2022 - 2023</span>
+                </div>
+                <p class="exp-context">
+                    Pilotage d'un portefeuille de 631 références générant 41M€ de CA. Transformation vers l'éclairage connecté (IoT) et reporting stratégique C-level.
+                </p>
+                
+                <div class="key-figures">
+                    <div class="figure"><strong>41M€</strong> CA géré</div>
+                    <div class="figure"><strong>631</strong> références produits</div>
+                    <div class="figure"><strong>+5%</strong> croissance YoY</div>
+                </div>
+                
+                <div class="exp-missions">
+                    <ul>
+                        <li>Pricing, forecast & roadmap produit data-driven</li>
+                        <li>Déploiement dashboards Power BI pour la direction</li>
+                        <li>10 recommandations techniques validées par la R&D</li>
+                        <li>Animation Sales, Supply, Finance</li>
+                    </ul>
+                </div>
+                
+                <div class="exp-tech">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Salesforce</span>
+                    <span class="tech-tag">Excel</span>
+                    <span class="tech-tag">IoT APIs</span>
+                </div>
+            </div>
+
+            <!-- Philips Ingénieur d'affaires -->
+            <div class="experience-item">
+                <div class="exp-header">
+                    <div>
+                        <div class="exp-title">Ingénieur d'Affaires IoT / Data Analyst CRM</div>
+                        <div class="exp-company">Philips Lighting (Signify)</div>
+                    </div>
+                    <span class="exp-date">2016 - 2022</span>
+                </div>
+                <p class="exp-context">
+                    Gestion grands comptes (Sodebo, Bénéteau, Lacroix Electronics, BNP Paribas, Doctolib) et pilotage du projet national de refonte CRM Salesforce.
+                </p>
+                
+                <div class="key-figures">
+                    <div class="figure"><strong>3,4M€</strong> CA (+160%)</div>
+                    <div class="figure"><strong>80</strong> commerciaux formés</div>
+                    <div class="figure"><strong>92%</strong> NPS client</div>
+                </div>
+                
+                <div class="exp-missions">
+                    <ul>
+                        <li>Développement portefeuille grands comptes multisectoriels</li>
+                        <li>Pilotage projet national refonte méthodologie CRM Salesforce</li>
+                        <li>Formation de 80 commerciaux aux nouvelles pratiques</li>
+                        <li>10 ateliers inter-fonctionnels (Commerce, Marketing, Support, IT)</li>
+                    </ul>
+                </div>
+                
+                <div class="exp-tech">
+                    <span class="tech-tag">Salesforce</span>
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">Office 365</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Compétences -->
+        <section class="section">
+            <h2 class="section-title">🛠️ Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>💻 Langages</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL Avancé</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🤖 IA & LLM</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">RAG</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>☁️ Cloud & Orchestration</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">dbt</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🗄️ Bases de Données</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">Snowflake</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🐳 DevOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📊 Visualisation</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Metabase</span>
+                        <span class="skill-tag">Looker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="section">
+            <h2 class="section-title">🎯 Compétences Transversales</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>📚 Pédagogie</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Formation</span>
+                        <span class="skill-tag">Coaching</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>📋 Gestion de Projet</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Kanban</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>💬 Communication</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Négociation C-level</span>
+                        <span class="skill-tag">Storytelling</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>🏆 Leadership</h3>
+                    <div class="skill-list">
+                        <span class="skill-tag">Mentoring</span>
+                        <span class="skill-tag">Conduite du changement</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formation -->
+        <section class="section">
+            <h2 class="section-title">🎓 Formation</h2>
+            
+            <div class="formation-item">
+                <div class="formation-icon">🎓</div>
+                <div class="formation-content">
+                    <h3>Master 2 Marketing Digital Stratégique</h3>
+                    <p>IDRAC Business School Nantes</p>
+                </div>
+            </div>
+            
+            <div class="formation-item">
+                <div class="formation-icon">💻</div>
+                <div class="formation-content">
+                    <h3>Bachelor Concepteur Développeur IA & Big Data</h3>
+                    <p>Le Wagon, Nantes - Option Data Analyst</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="section">
+            <h2 class="section-title">🏅 Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <strong>DataCamp</strong><br>
+                    Associate AI Engineer for Developers (2025)
+                </div>
+                <div class="cert-item">
+                    <strong>IBM</strong><br>
+                    Data Engineering (2025)
+                </div>
+                <div class="cert-item">
+                    <strong>Cisco</strong><br>
+                    Networking Basics (2025)
+                </div>
+                <div class="cert-item">
+                    <strong>Agile Yesi Education</strong><br>
+                    Scrum Master & Kanban
+                </div>
+                <div class="cert-item">
+                    <strong>Harvard Online</strong><br>
+                    Gestion Projet & Business Case
+                </div>
+                <div class="cert-item">
+                    <strong>Udemy</strong><br>
+                    Python Data Prep & EDA
+                </div>
+            </div>
+        </section>
+
+        <!-- Langues -->
+        <section class="section">
+            <h2 class="section-title">🌍 Langues</h2>
+            <div class="languages">
+                <div class="lang-item">
+                    <span class="lang-flag">🇫🇷</span>
+                    <span>Français</span>
+                    <span class="lang-level">Natif</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span>Anglais</span>
+                    <span class="lang-level">Professionnel C1</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <img src="https://www.data-inceptio.ai/wp-content/uploads/2025/03/Logo.svg" alt="Data Inceptio.ai" class="footer-logo">
+            <p>Paul Fretté - Data Engineer & Formateur IA | Disponible pour projets Data & IA</p>
+        </footer>
+    </div>
+</body>
+</html>
