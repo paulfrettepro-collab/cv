@@ -4,8 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Paul Fretté - Data Engineer & Formateur IA</title>
+    <meta name="description"
+        content="CV de Paul Fretté, Data Engineer et Formateur IA chez Data Inceptio. Pipelines de données, agents IA, formation entreprise.">
+    <title>Paul Fretté — Data Engineer &amp; Formateur IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --purple-dark: #34184F;
+            --purple-mid: #431F66;
+            --purple-bright: #512DA8;
+            --champagne: #E8D5B7;
+            --champagne-light: #F2E6D0;
+            --lavender: #B8A9D4;
+            --text: #2d2d3a;
+            --text-light: #5a5a6e;
+            --bg: #faf8f6;
+            --white: #ffffff;
+            --success: #2d8a56;
+            --success-bg: #edf7f1;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,25 +33,24 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #333333;
-            line-height: 1.6;
-            background: #f8f9fa;
+            font-family: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.65;
+            background: var(--bg);
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            background: var(--white);
+            box-shadow: 0 4px 40px rgba(52, 24, 79, 0.08);
         }
 
-        /* Header avec dégradé violet */
+        /* ── Header ── */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-bright) 100%);
             color: white;
-            padding: 40px;
-            position: relative;
+            padding: 44px 44px 36px;
         }
 
         .header-content {
@@ -45,79 +64,97 @@
         }
 
         .header-right {
-            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
         }
 
         .logo-company {
-            height: 50px;
+            height: 44px;
             filter: brightness(0) invert(1);
-            margin-bottom: 10px;
         }
 
         h1 {
-            font-size: 2.8em;
+            font-size: 2.6em;
             font-weight: 700;
-            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+            margin-bottom: 4px;
         }
 
         .job-title {
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 15px;
+            color: var(--champagne-light);
+            margin-bottom: 16px;
         }
 
         .contact-info {
             display: flex;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
-            font-size: 1em;
+            font-size: 0.88em;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
         }
 
         .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            opacity: 0.9;
         }
 
-        /* Section commune */
+        .separator {
+            opacity: 0.4;
+        }
+
+        /* ── Sections ── */
         .section {
-            padding: 30px 40px;
-            border-bottom: 1px solid #eee;
+            padding: 32px 44px;
+            border-bottom: 1px solid #f0ece8;
         }
 
-        .section:last-child {
+        .section:last-of-type {
             border-bottom: none;
         }
 
         .section-title {
-            font-size: 1.6em;
-            color: #667eea;
+            font-size: 1.3em;
+            font-weight: 600;
+            color: var(--purple-mid);
             margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--lavender);
+            display: inline-block;
         }
 
-        /* Profil */
+        /* ── Profil ── */
         .profile {
-            background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
+            background: linear-gradient(135deg, var(--champagne-light) 0%, var(--white) 100%);
         }
 
         .profile p {
-            font-size: 1.1em;
-            color: #555555;
-            text-align: justify;
+            font-size: 1em;
+            color: var(--text-light);
+            line-height: 1.8;
         }
 
-        /* Expériences */
+        /* ── Expériences ── */
         .experience-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
-            border-left: 4px solid #667eea;
+            margin-bottom: 28px;
+            padding: 24px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(52, 24, 79, 0.06);
+            border-left: 4px solid var(--purple-bright);
         }
 
         .experience-item:last-child {
@@ -128,41 +165,49 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
             gap: 10px;
         }
 
         .exp-title {
-            font-size: 1.3em;
+            font-size: 1.12em;
             font-weight: 600;
-            color: #333;
+            color: var(--text);
         }
 
         .exp-company {
-            color: #764ba2;
+            color: var(--purple-bright);
             font-weight: 500;
+            font-size: 0.92em;
         }
 
         .exp-date {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-bright));
             color: white;
-            padding: 5px 15px;
+            padding: 4px 14px;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 0.8em;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .exp-context {
-            color: #555;
-            margin-bottom: 15px;
+            color: var(--text-light);
+            margin-bottom: 14px;
+            font-size: 0.92em;
             font-style: italic;
         }
 
         .exp-missions h4 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1em;
+            color: var(--purple-mid);
+            margin: 14px 0 8px;
+            font-size: 0.92em;
+            font-weight: 600;
+        }
+
+        .exp-missions h4:first-child {
+            margin-top: 0;
         }
 
         .exp-missions ul {
@@ -171,80 +216,154 @@
         }
 
         .exp-missions li {
-            padding: 5px 0 5px 25px;
+            padding: 3px 0 3px 20px;
             position: relative;
-            color: #555;
+            color: var(--text-light);
+            font-size: 0.9em;
         }
 
         .exp-missions li::before {
-            content: "▸";
-            color: #667eea;
+            content: "\203A";
+            color: var(--purple-bright);
             position: absolute;
-            left: 5px;
+            left: 4px;
+            font-weight: 700;
+            font-size: 1.1em;
         }
 
         .exp-tech {
-            margin-top: 15px;
+            margin-top: 14px;
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
         }
 
         .tech-tag {
-            background: linear-gradient(135deg, #667eea20, #764ba220);
-            color: #667eea;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
+            background: rgba(81, 45, 168, 0.08);
+            color: var(--purple-mid);
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.78em;
             font-weight: 500;
         }
 
         .key-figures {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
-            margin: 15px 0;
+            gap: 12px;
+            margin: 12px 0;
         }
 
         .figure {
-            background: #f0fff4;
-            border: 1px solid #27ae60;
-            padding: 8px 15px;
+            background: var(--success-bg);
+            border: 1px solid rgba(45, 138, 86, 0.2);
+            padding: 6px 14px;
             border-radius: 8px;
-            font-size: 0.9em;
+            font-size: 0.85em;
         }
 
         .figure strong {
-            color: #27ae60;
+            color: var(--success);
+            font-weight: 600;
         }
 
-        /* Compétences */
+        /* ── Projets ── */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .project-card {
+            background: var(--white);
+            border: 1px solid #f0ece8;
+            border-radius: 10px;
+            padding: 20px;
+            transition: box-shadow 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            box-shadow: 0 4px 16px rgba(52, 24, 79, 0.1);
+            border-color: var(--lavender);
+        }
+
+        .project-card.featured {
+            grid-column: 1 / -1;
+            border-left: 4px solid var(--purple-bright);
+            background: linear-gradient(135deg, rgba(184, 169, 212, 0.06) 0%, var(--white) 100%);
+        }
+
+        .project-name {
+            font-weight: 600;
+            font-size: 0.95em;
+            color: var(--text);
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: 0.85em;
+            color: var(--text-light);
+            line-height: 1.6;
+            flex: 1;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .project-tech span {
+            font-size: 0.72em;
+            color: var(--purple-mid);
+            background: rgba(81, 45, 168, 0.06);
+            padding: 2px 8px;
+            border-radius: 8px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .project-links a {
+            font-size: 0.8em;
+            color: var(--purple-bright);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 3px 12px;
+            border: 1px solid var(--lavender);
+            border-radius: 12px;
+            transition: background 0.2s;
+        }
+
+        .project-links a:hover {
+            background: rgba(81, 45, 168, 0.06);
+        }
+
+        /* ── Compétences ── */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        @media (max-width: 700px) {
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+            gap: 14px;
         }
 
         .skill-category {
-            background: #fff;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+            padding: 16px;
+            border-radius: 10px;
+            background: var(--white);
+            border: 1px solid #f0ece8;
         }
 
         .skill-category h3 {
-            color: #764ba2;
-            font-size: 1.1em;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            color: var(--purple-mid);
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
         .skill-list {
@@ -254,111 +373,184 @@
         }
 
         .skill-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-bright));
             color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85em;
+            padding: 4px 12px;
+            border-radius: 14px;
+            font-size: 0.78em;
+            font-weight: 400;
         }
 
-        /* Formation */
+        /* ── Soft skills ── */
+        .soft-skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .soft-skill {
+            background: var(--champagne-light);
+            color: var(--purple-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        /* ── Formation ── */
         .formation-item {
             display: flex;
-            gap: 20px;
-            margin-bottom: 20px;
-            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+            align-items: center;
         }
 
-        .formation-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+        .formation-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .formation-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--purple-bright);
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5em;
             flex-shrink: 0;
         }
 
         .formation-content h3 {
-            color: #333;
-            font-size: 1.1em;
+            font-size: 0.95em;
+            color: var(--text);
+            font-weight: 600;
         }
 
         .formation-content p {
-            color: #555;
-            font-size: 0.95em;
+            color: var(--text-light);
+            font-size: 0.88em;
         }
 
-        /* Certifications */
+        /* ── Certifications ── */
         .cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
         }
 
         .cert-item {
-            background: #f0f4ff;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 3px solid #667eea;
+            padding: 14px;
+            border-radius: 8px;
+            background: rgba(184, 169, 212, 0.1);
+            border-left: 3px solid var(--lavender);
+            font-size: 0.88em;
+            color: var(--text-light);
         }
 
         .cert-item strong {
-            color: #667eea;
+            color: var(--purple-mid);
+            display: block;
+            margin-bottom: 2px;
         }
 
-        /* Langues */
+        /* ── Langues ── */
         .languages {
             display: flex;
-            gap: 30px;
+            gap: 28px;
         }
 
         .lang-item {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        .lang-flag {
-            font-size: 1.5em;
+            font-size: 0.92em;
         }
 
         .lang-level {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, var(--purple-dark), var(--purple-bright));
             color: white;
             padding: 3px 10px;
             border-radius: 10px;
             font-size: 0.8em;
         }
 
-        /* Footer */
+        /* ── Footer ── */
         .footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-bright) 100%);
             color: white;
-            padding: 25px 40px;
+            padding: 22px 44px;
             text-align: center;
         }
 
-        .footer-logo {
-            height: 40px;
-            filter: brightness(0) invert(1);
-            margin-bottom: 10px;
-        }
-
         .footer p {
-            opacity: 0.9;
-            font-size: 0.95em;
+            opacity: 0.85;
+            font-size: 0.85em;
+            font-weight: 300;
         }
 
-        /* Print styles */
+        .footer a {
+            color: var(--champagne-light);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 700px) {
+            .header {
+                padding: 28px 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+            }
+
+            .header-right {
+                align-items: flex-start;
+                margin-top: 12px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 24px 20px;
+            }
+
+            .skills-grid,
+            .cert-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: 1;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .languages {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .key-figures {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        /* ── Print ── */
         @media print {
-            * {
+
+            *,
+            *::before,
+            *::after {
                 -webkit-print-color-adjust: exact !important;
                 print-color-adjust: exact !important;
-                color-adjust: exact !important;
             }
 
             body {
@@ -369,15 +561,21 @@
                 box-shadow: none;
             }
 
-            .header,
-            .footer {
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+            .header {
+                background: var(--purple-dark) !important;
             }
 
             .experience-item,
-            .skill-category {
+            .skill-category,
+            .project-card {
                 box-shadow: none;
-                border: 1px solid #eee;
+                break-inside: avoid;
+            }
+
+            .project-links a::after {
+                content: " (" attr(href) ")";
+                font-size: 0.75em;
+                color: var(--text-light);
             }
         }
     </style>
@@ -385,99 +583,100 @@
 
 <body>
     <div class="container">
-        <!-- Header -->
+
+        <!-- ── Header ── -->
         <header class="header">
             <div class="header-content">
                 <div class="header-left">
                     <h1>Paul Fretté</h1>
-                    <div class="job-title">🚀 Data Engineer & Formateur IA</div>
+                    <div class="job-title">Data Engineer &amp; Formateur IA</div>
                     <div class="contact-info">
-                        <span>📱 06 76 65 16 54</span>
-                        <span>✉️ paul.frette.pro@gmail.com</span>
-                        <span>📍 France</span>
+                        <span>06 76 65 16 54</span>
+                        <span class="separator">|</span>
+                        <a href="mailto:paul.frette.pro@gmail.com">paul.frette.pro@gmail.com</a>
+                        <span class="separator">|</span>
+                        <a href="https://github.com/paulfrettepro-collab" target="_blank"
+                            rel="noopener">GitHub</a>
+                        <span class="separator">|</span>
+                        <span>France</span>
                     </div>
                 </div>
                 <div class="header-right">
-                    <img src="https://www.data-inceptio.ai/wp-content/uploads/2025/03/Logo.svg" alt="Data Inceptio.ai"
-                        class="logo-company">
+                    <img src="https://www.data-inceptio.ai/wp-content/uploads/2025/03/Logo.svg"
+                        alt="Data Inceptio.ai" class="logo-company">
                 </div>
             </div>
         </header>
 
-        <!-- Profil -->
+        <!-- ── Profil ── -->
         <section class="section profile">
-            <h2 class="section-title">👤 Profil</h2>
+            <h2 class="section-title">Profil</h2>
             <p>
-                Data Engineer et Consultant Formateur IA passionné, je combine une expertise technique approfondie en
-                ingénierie de données et intelligence artificielle avec des compétences avérées en formation, conseil et
-                gestion de projet. Fort de 10+ années d'expérience terrain, je conçois des architectures data robustes,
-                développe des agents IA innovants (RAG, LLM) et accompagne les organisations dans leur transformation
-                digitale. Ma capacité à vulgariser des concepts complexes et mon leadership collaboratif me permettent
-                de piloter des projets à forte valeur ajoutée tout en formant les équipes aux dernières technologies.
+                Profil atypique alliant 7 ans d'expérience business et IoT chez Philips/Signify
+                à une reconversion réussie en data engineering. Aujourd'hui Data Engineer &amp;
+                Formateur IA chez Data Inceptio, je conçois des pipelines de données, développe
+                des agents IA et forme les entreprises aux outils d'intelligence artificielle.
+                Mon parcours me permet de comprendre les enjeux métier autant que les contraintes
+                techniques — un atout pour traduire les besoins business en solutions data concrètes.
             </p>
         </section>
 
-        <!-- Expériences -->
+        <!-- ── Expériences ── -->
         <section class="section">
-            <h2 class="section-title">💼 Expériences Professionnelles</h2>
+            <h2 class="section-title">Expériences Professionnelles</h2>
 
-            <!-- Data Inceptio.ai -->
+            <!-- Data Inceptio -->
             <div class="experience-item">
                 <div class="exp-header">
                     <div>
-                        <div class="exp-title">Data Engineer & Consultant Formateur IA</div>
-                        <div class="exp-company">Data Inceptio.ai</div>
+                        <div class="exp-title">Data Engineer &amp; Formateur IA</div>
+                        <div class="exp-company">Data Inceptio.ai — Conseil &amp; Services Data / IA</div>
                     </div>
-                    <span class="exp-date">Octobre 2025 - Présent</span>
+                    <span class="exp-date">Octobre 2025 — Présent</span>
                 </div>
                 <p class="exp-context">
-                    Poste polyvalent combinant expertise technique en data engineering et IA, gestion de projet, conseil
-                    stratégique et formation. Participation à des projets innovants ayant un impact réel sur les
-                    organisations clientes.
+                    Missions variées : ingénierie de données sur projet européen, développement d'agents IA,
+                    intégrations systèmes d'entreprise et formation IA pour clients grands comptes.
                 </p>
 
                 <div class="exp-missions">
-                    <h4>🔧 Ingénierie de Données</h4>
+                    <h4>Projet GREENOV RO2B2 — Robotique sous-marine (consortium EU)</h4>
                     <ul>
-                        <li>Conception et développement de pipelines ETL/ELT scalables (Azure, AWS, GCP)</li>
-                        <li>Administration et optimisation de bases de données (PostgreSQL, MongoDB, Snowflake,
-                            BigQuery)</li>
-                        <li>Mise en place de processus automatisés de traitement et monitoring des données</li>
+                        <li>Data Engineer sur un POC de traitement anti-biofouling par robots sous-marins
+                            (financement BPIfrance / CMA-CGM)</li>
+                        <li>Conception de l'architecture fonctionnelle de données (5-10 TB cumulés,
+                            images 1600×1200px)</li>
+                        <li>Rédaction du cahier des charges V2.0 pour la chaîne de traitement data</li>
+                        <li>Exploration de modèles de classification d'images (DINOv2 + SVM) pour la
+                            segmentation sémantique du biofouling</li>
                     </ul>
 
-                    <h4>🤖 Développement d'Agents IA</h4>
+                    <h4>Agents IA &amp; Automatisation</h4>
                     <ul>
-                        <li>Conception d'agents IA conversationnels avec LLM (GPT, Claude, LangChain, LlamaIndex)</li>
-                        <li>Implémentation d'architectures RAG (Retrieval-Augmented Generation)</li>
-                        <li>Fine-tuning et optimisation de modèles selon les besoins métiers</li>
+                        <li>Développement de 14 agents IA sur la plateforme Swiftask (API REST + GraphQL)</li>
+                        <li>Configuration de bases de connaissances RAG et orchestration multi-agents</li>
+                        <li>Automatisation de workflows : reporting hebdomadaire, génération de contenu, CRM</li>
+                        <li>Intégration Python vers Microsoft 365 (MSAL / OAuth, Graph API), Odoo ERP (XML-RPC)
+                            et Notion API</li>
                     </ul>
 
-                    <h4>📐 Architecture & Conseil</h4>
+                    <h4>Formation IA Entreprise</h4>
                     <ul>
-                        <li>Design d'architectures data end-to-end (collecte, stockage, traitement, visualisation)</li>
-                        <li>Accompagnement à la transformation digitale et migration cloud</li>
-                        <li>Production de spécifications techniques et documentation d'architecture</li>
-                    </ul>
-
-                    <h4>📚 Formation & Transmission</h4>
-                    <ul>
-                        <li>Conception de programmes de formation sur mesure (IA, ML, Data Engineering)</li>
-                        <li>Animation de formations techniques et ateliers pratiques (débutants à experts)</li>
-                        <li>Coaching et accompagnement des équipes dans l'adoption des technologies IA</li>
+                        <li>Conception et animation de formations Copilot &amp; IA pour des clients grands comptes</li>
+                        <li>Création de supports pédagogiques multi-niveaux (4 niveaux progressifs)</li>
+                        <li>Accompagnement à l'adoption des outils IA dans les équipes métier</li>
                     </ul>
                 </div>
 
                 <div class="exp-tech">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">LangChain</span>
-                    <span class="tech-tag">LlamaIndex</span>
                     <span class="tech-tag">OpenAI API</span>
-                    <span class="tech-tag">Azure</span>
-                    <span class="tech-tag">Airflow</span>
-                    <span class="tech-tag">DBT</span>
-                    <span class="tech-tag">Docker</span>
-                    <span class="tech-tag">Kubernetes</span>
-
+                    <span class="tech-tag">REST / GraphQL</span>
+                    <span class="tech-tag">Microsoft Graph</span>
+                    <span class="tech-tag">MSAL / OAuth</span>
+                    <span class="tech-tag">Notion API</span>
+                    <span class="tech-tag">XML-RPC</span>
+                    <span class="tech-tag">scikit-learn</span>
                 </div>
             </div>
 
@@ -488,26 +687,25 @@
                         <div class="exp-title">Analytics Engineer / Data Analyst</div>
                         <div class="exp-company">Propriétés Privées (Freelance)</div>
                     </div>
-                    <span class="exp-date">Janvier 2024 - Juin 2025</span>
+                    <span class="exp-date">Janvier 2024 — Juin 2025</span>
                 </div>
                 <p class="exp-context">
-                    Mission freelance pour structurer un Référentiel Client Unique à partir de 27 bases PostgreSQL
-                    hétérogènes. Création d'un Data Mart structuré pour le marketing automation et lead nurturing.
+                    Mission freelance : construction d'un Référentiel Client Unique à partir de 27 bases
+                    PostgreSQL hétérogènes pour le marketing automation.
                 </p>
 
                 <div class="key-figures">
                     <div class="figure"><strong>27</strong> bases analysées</div>
                     <div class="figure"><strong>1,14M</strong> lignes normalisées</div>
-                    <div class="figure"><strong>30 jours</strong> pour livraison</div>
+                    <div class="figure"><strong>30 jours</strong> de livraison</div>
                 </div>
 
                 <div class="exp-missions">
                     <ul>
-                        <li>Audit de 27 bases PostgreSQL & mapping des flux de données</li>
-                        <li>Conception modèle étoile & documentation dbt</li>
-                        <li>Pipelines Airflow + tests unitaires</li>
-                        <li>Dashboards interactifs Metabase</li>
-                        <li>Formation des équipes marketing (data literacy)</li>
+                        <li>Audit de 27 bases PostgreSQL &amp; mapping des flux de données</li>
+                        <li>Conception du modèle étoile &amp; documentation dbt</li>
+                        <li>Pipelines de données et tests unitaires</li>
+                        <li>Dashboards interactifs Metabase pour les équipes marketing</li>
                     </ul>
                 </div>
 
@@ -515,9 +713,8 @@
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">SQL</span>
                     <span class="tech-tag">PostgreSQL</span>
-                    <span class="tech-tag">Metabase</span>
                     <span class="tech-tag">dbt</span>
-                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">Metabase</span>
                     <span class="tech-tag">Git</span>
                 </div>
             </div>
@@ -529,11 +726,11 @@
                         <div class="exp-title">Business Analyst IoT / Chef de Produit</div>
                         <div class="exp-company">Philips Lighting (Signify)</div>
                     </div>
-                    <span class="exp-date">2022 - 2023</span>
+                    <span class="exp-date">2022 — 2023</span>
                 </div>
                 <p class="exp-context">
-                    Pilotage d'un portefeuille de 631 références générant 41M€ de CA. Transformation vers l'éclairage
-                    connecté (IoT) et reporting stratégique C-level.
+                    Pilotage d'un portefeuille de 631 références générant 41M€ de CA.
+                    Transformation vers l'éclairage connecté (IoT) et reporting stratégique C-level.
                 </p>
 
                 <div class="key-figures">
@@ -544,10 +741,10 @@
 
                 <div class="exp-missions">
                     <ul>
-                        <li>Pricing, forecast & roadmap produit data-driven</li>
-                        <li>Déploiement dashboards Power BI pour la direction</li>
-                        <li>10 recommandations techniques validées par la R&D</li>
-                        <li>Animation Sales, Supply, Finance</li>
+                        <li>Pricing, forecast &amp; roadmap produit data-driven</li>
+                        <li>Déploiement de dashboards Power BI pour la direction</li>
+                        <li>10 recommandations techniques validées par la R&amp;D</li>
+                        <li>Animation transverse Sales, Supply, Finance</li>
                     </ul>
                 </div>
 
@@ -566,11 +763,11 @@
                         <div class="exp-title">Ingénieur d'Affaires IoT / Data Analyst CRM</div>
                         <div class="exp-company">Philips Lighting (Signify)</div>
                     </div>
-                    <span class="exp-date">2016 - 2022</span>
+                    <span class="exp-date">2016 — 2022</span>
                 </div>
                 <p class="exp-context">
-                    Gestion grands comptes (Sodebo, Bénéteau, Lacroix Electronics, BNP Paribas, Doctolib) et pilotage du
-                    projet national de refonte CRM Salesforce.
+                    Gestion grands comptes (Sodebo, Bénéteau, Lacroix Electronics, BNP Paribas, Doctolib)
+                    et pilotage du projet national de refonte CRM Salesforce.
                 </p>
 
                 <div class="key-figures">
@@ -581,9 +778,9 @@
 
                 <div class="exp-missions">
                     <ul>
-                        <li>Développement portefeuille grands comptes multisectoriels</li>
-                        <li>Pilotage projet national refonte méthodologie CRM Salesforce</li>
-                        <li>Formation de 80 commerciaux aux nouvelles pratiques</li>
+                        <li>Développement d'un portefeuille grands comptes multisectoriels</li>
+                        <li>Pilotage du projet national de refonte méthodologie CRM Salesforce</li>
+                        <li>Formation de 80 commerciaux aux nouvelles pratiques CRM</li>
                         <li>10 ateliers inter-fonctionnels (Commerce, Marketing, Support, IT)</li>
                     </ul>
                 </div>
@@ -596,170 +793,269 @@
             </div>
         </section>
 
-        <!-- Compétences -->
+        <!-- ── Projets Open Source ── -->
         <section class="section">
-            <h2 class="section-title">🛠️ Compétences Techniques</h2>
+            <h2 class="section-title">Projets</h2>
+            <div class="projects-grid">
+
+                <!-- Featured: Battlefield -->
+                <div class="project-card featured">
+                    <div class="project-name">Battlefield Meta Aggregator — Pipeline ELT de bout en bout</div>
+                    <div class="project-desc">
+                        Pipeline automatisé complet : scraping Selenium (TOP 50 mondial) vers BigQuery
+                        (architecture Medallion bronze / silver / gold) vers dbt (44 tests de qualité)
+                        vers dashboard Streamlit interactif. Orchestré par GitHub Actions (cron hebdomadaire).
+                        Coût d'infrastructure : 0€/mois (free tier GCP).
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Selenium</span>
+                        <span>BigQuery</span>
+                        <span>dbt</span>
+                        <span>Streamlit</span>
+                        <span>GitHub Actions</span>
+                        <span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://battlefieldmetaaggregator.streamlit.app" target="_blank"
+                            rel="noopener">Démo live</a>
+                        <a href="https://github.com/paulfrettepro-collab/battlefield_meta_aggregator"
+                            target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+                <!-- RCU -->
+                <div class="project-card">
+                    <div class="project-name">Référentiel Client Unique — Data Quality</div>
+                    <div class="project-desc">
+                        Fusion et nettoyage de 27 bases PostgreSQL hétérogènes. Analyse qualité
+                        des données, validation email/téléphone, segmentation clients par engagement.
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>pandas</span>
+                        <span>SQL</span>
+                        <span>Jupyter</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/paulfrettepro-collab/data-analysis-portfolio"
+                            target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+                <!-- Embeddings -->
+                <div class="project-card">
+                    <div class="project-name">Analyse Sémantique par Embeddings</div>
+                    <div class="project-desc">
+                        Analyse d'avis clients via embeddings OpenAI, visualisation t-SNE 2D,
+                        moteur de recherche sémantique par similarité cosinus.
+                    </div>
+                    <div class="project-tech">
+                        <span>OpenAI API</span>
+                        <span>scikit-learn</span>
+                        <span>t-SNE</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/paulfrettepro-collab/clothing-reviews-embeddings-analysis"
+                            target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+                <!-- Medical Transcriptions -->
+                <div class="project-card">
+                    <div class="project-name">Extraction Structurée par LLM</div>
+                    <div class="project-desc">
+                        Transformation de transcriptions médicales en données tabulaires
+                        via OpenAI Function Calling + enrichissement codes ICD-10.
+                    </div>
+                    <div class="project-tech">
+                        <span>OpenAI Function Calling</span>
+                        <span>pandas</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/paulfrettepro-collab/organizing_medical_transcriptions_with_OpenAI_API"
+                            target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+                <!-- ML Projects -->
+                <div class="project-card">
+                    <div class="project-name">Machine Learning — Clustering &amp; Classification</div>
+                    <div class="project-desc">
+                        Clustering K-Means sur données Spotify + classification supervisée
+                        de trolls (Gradient Boosting ~78% accuracy via PyCaret).
+                    </div>
+                    <div class="project-tech">
+                        <span>scikit-learn</span>
+                        <span>PyCaret</span>
+                        <span>K-Means</span>
+                        <span>Plotly</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/paulfrettepro-collab/machine_learning_projects"
+                            target="_blank" rel="noopener">Code source</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Compétences Techniques ── -->
+        <section class="section">
+            <h2 class="section-title">Compétences Techniques</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>💻 Langages</h3>
+                    <h3>Data Engineering</h3>
                     <div class="skill-list">
                         <span class="skill-tag">Python</span>
-                        <span class="skill-tag">SQL Avancé</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Streamlit</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>🤖 IA & LLM</h3>
+                    <h3>IA &amp; Machine Learning</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">LangChain</span>
                         <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Embeddings</span>
+                        <span class="skill-tag">Function Calling</span>
+                        <span class="skill-tag">scikit-learn</span>
                         <span class="skill-tag">RAG</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>☁️ Cloud & Orchestration</h3>
+                    <h3>APIs &amp; Intégrations</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">GCP</span>
-                        <span class="skill-tag">Airflow</span>
-                        <span class="skill-tag">dbt</span>
+                        <span class="skill-tag">REST</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">XML-RPC</span>
+                        <span class="skill-tag">MSAL / OAuth</span>
+                        <span class="skill-tag">Microsoft Graph</span>
+                        <span class="skill-tag">Selenium</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>🗄️ Bases de Données</h3>
+                    <h3>Visualisation &amp; BI</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">BigQuery</span>
-                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Metabase</span>
+                        <span class="skill-tag">matplotlib</span>
+                        <span class="skill-tag">seaborn</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>🐳 DevOps</h3>
+                    <h3>DevOps &amp; Outils</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Docker</span>
                         <span class="skill-tag">CI/CD</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>📊 Visualisation</h3>
+                    <h3>Écosystème</h3>
                     <div class="skill-list">
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Metabase</span>
-                        <span class="skill-tag">Looker</span>
+                        <span class="skill-tag">Salesforce</span>
+                        <span class="skill-tag">Office 365</span>
+                        <span class="skill-tag">Notion</span>
+                        <span class="skill-tag">Odoo</span>
+                        <span class="skill-tag">SharePoint</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Soft Skills -->
+        <!-- ── Compétences Transversales ── -->
         <section class="section">
-            <h2 class="section-title">🎯 Compétences Transversales</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>📚 Pédagogie</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Formation</span>
-                        <span class="skill-tag">Coaching</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>📋 Gestion de Projet</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Agile/Scrum</span>
-                        <span class="skill-tag">Kanban</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>💬 Communication</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Négociation C-level</span>
-                        <span class="skill-tag">Storytelling</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>🏆 Leadership</h3>
-                    <div class="skill-list">
-                        <span class="skill-tag">Mentoring</span>
-                        <span class="skill-tag">Conduite du changement</span>
-                    </div>
-                </div>
+            <h2 class="section-title">Compétences Transversales</h2>
+            <div class="soft-skills-list">
+                <span class="soft-skill">Formation &amp; Pédagogie IA</span>
+                <span class="soft-skill">Gestion de Projet (Agile / Kanban)</span>
+                <span class="soft-skill">Négociation C-level</span>
+                <span class="soft-skill">Storytelling Data</span>
+                <span class="soft-skill">Conduite du changement</span>
+                <span class="soft-skill">Accompagnement équipes</span>
             </div>
         </section>
 
-        <!-- Formation -->
+        <!-- ── Formation ── -->
         <section class="section">
-            <h2 class="section-title">🎓 Formation</h2>
+            <h2 class="section-title">Formation</h2>
 
             <div class="formation-item">
-                <div class="formation-icon">🎓</div>
+                <div class="formation-dot"></div>
                 <div class="formation-content">
                     <h3>Master 2 Marketing Digital Stratégique</h3>
-                    <p>IDRAC Business School Nantes</p>
+                    <p>IDRAC Business School, Nantes</p>
                 </div>
             </div>
 
             <div class="formation-item">
-                <div class="formation-icon">💻</div>
+                <div class="formation-dot"></div>
                 <div class="formation-content">
-                    <h3>Bachelor Concepteur Développeur IA & Big Data</h3>
-                    <p>Le Wagon, Nantes - Option Data Analyst</p>
+                    <h3>Bachelor Concepteur Développeur IA &amp; Big Data</h3>
+                    <p>Le Wagon, Nantes — Option Data Analyst</p>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications -->
+        <!-- ── Certifications ── -->
         <section class="section">
-            <h2 class="section-title">🏅 Certifications</h2>
+            <h2 class="section-title">Certifications</h2>
             <div class="cert-grid">
                 <div class="cert-item">
-                    <strong>DataCamp</strong><br>
+                    <strong>DataCamp</strong>
                     Associate AI Engineer for Developers (2025)
                 </div>
                 <div class="cert-item">
-                    <strong>IBM</strong><br>
+                    <strong>IBM</strong>
                     Data Engineering (2025)
                 </div>
                 <div class="cert-item">
-                    <strong>Cisco</strong><br>
+                    <strong>Cisco</strong>
                     Networking Basics (2025)
                 </div>
                 <div class="cert-item">
-                    <strong>Agile Yesi Education</strong><br>
-                    Scrum Master & Kanban
+                    <strong>Agile Yesi Education</strong>
+                    Scrum Master &amp; Kanban
                 </div>
                 <div class="cert-item">
-                    <strong>Harvard Online</strong><br>
-                    Gestion Projet & Business Case
+                    <strong>Harvard Online</strong>
+                    Gestion Projet &amp; Business Case
                 </div>
                 <div class="cert-item">
-                    <strong>Udemy</strong><br>
-                    Python Data Prep & EDA
+                    <strong>Udemy</strong>
+                    Python Data Prep &amp; EDA
                 </div>
             </div>
         </section>
 
-        <!-- Langues -->
+        <!-- ── Langues ── -->
         <section class="section">
-            <h2 class="section-title">🌍 Langues</h2>
+            <h2 class="section-title">Langues</h2>
             <div class="languages">
                 <div class="lang-item">
-                    <span class="lang-flag">🇫🇷</span>
                     <span>Français</span>
                     <span class="lang-level">Natif</span>
                 </div>
                 <div class="lang-item">
-                    <span class="lang-flag">🇬🇧</span>
                     <span>Anglais</span>
                     <span class="lang-level">Professionnel C1</span>
                 </div>
             </div>
         </section>
 
-        <!-- Footer -->
+        <!-- ── Footer ── -->
         <footer class="footer">
-            <img src="https://www.data-inceptio.ai/wp-content/uploads/2025/03/Logo.svg" alt="Data Inceptio.ai"
-                class="footer-logo">
-            <p>Paul Fretté - Data Engineer & Formateur IA | Disponible pour projets Data & IA</p>
+            <p>
+                Paul Fretté — Data Engineer &amp; Formateur IA |
+                <a href="mailto:paul.frette.pro@gmail.com">paul.frette.pro@gmail.com</a> |
+                <a href="https://github.com/paulfrettepro-collab" target="_blank" rel="noopener">GitHub</a>
+            </p>
         </footer>
+
     </div>
 </body>
 
