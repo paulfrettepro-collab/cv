@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-04-27 — Ajout section "Engagement filière musicale"
+
+- **Action** : Ajout d'une nouvelle section dans `index.html` valorisant le profil d'acteur de la filière musicale française de Paul (production Maschine 3 / Ableton Live, DJ associatif, collectif organisateur, réseau mobilisable).
+- **Contexte** : Préparation de la candidature Data Inceptio à l'AO CNM 2026-06 (étude impact IAG sur filière musicale, dépôt 5 mai 2026). Le CV enrichi sera annexé au CRT pour démontrer la double casquette data engineer + acteur filière, différenciant majeur sur le sous-critère 1.1 "moyens humains et techniques" (30% pondération).
+- **Design** : section dédiée respectant la charte refondue (variables CSS Data Inceptio, police Sora, sans emojis dans les titres). Bloc `experience-item` standard avec `exp-tech` (Maschine 3, Ableton Live 11 & 12, Suno, Udio, Sound design, DJing) et `key-figures` pour les liens publics (Instagram @paulft_music, SoundCloud plaizan1994).
+- **Décisions** : section autonome (vs intégration dans Expériences Pro) pour mettre en valeur l'angle unique. Insérée entre "Expériences Professionnelles" et "Projets" dans le flux du CV.
+- **Livrables modifiés** : `index.html`
+
+---
+
 ## 2026-03-24 — Refonte complète du CV
 
 - **Action** : Réécriture intégrale de `index.html` pour un CV honnête et représentatif
@@ -39,3 +49,4 @@
 
 - [ ] Ajouter les notes d'évaluation des formations IA clients (scores à fournir par Paul)
 - [ ] Ajouter URL LinkedIn dans le header (si souhaité)
+- [x] Ajouter section "Engagement filière musicale" pour annexion CRT CNM (fait 2026-04-27)
