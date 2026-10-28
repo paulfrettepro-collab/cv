@@ -69,7 +69,7 @@
 ## 2026-10-28 (soir, 2) — Contre-expertise Fable 5.1 appliquée (GO Paul)
 - Cible Deployment Strategist / FDE. Relecture : `claude_ask.py --tier decision` (3,03 $).
 - Data Inceptio : GCP seul (Azure/AWS non sourcés), « configure, deploy and support RAG-based AI agents »,
-  « would recommend the program », app « internal » avec assistant LLM servi par la plateforme. « Directors » confirmé par Paul.
+  « would recommend the program », app « internal », déployée depuis GitHub sur Streamlit Cloud, assistant Claude servi par la plateforme (confirmé par Paul). « Directors » confirmé par Paul.
 - Projects : agent perso (« from my phone », watchdog 15+ contrôles, 11 post-mortems), deux vitrines Swift chiffrées,
   pipeline BigQuery public (44 tests dbt). Rénovation, Cisco et IBM retirés pour la place.
 - Education : titre RNCP 6 Le Wagon + IDRAC RNCP 7, une ligne chacun. Langues dans Skills. Swift et whisper.cpp ajoutés.
