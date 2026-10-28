@@ -5,6 +5,16 @@
 
 ---
 
+## 2026-10-28 (soir) — Corrections de Paul sur la refonte
+
+- **Retiré** : l'audit de données de la Région (Paul ne l'a pas réellement fait), en puce et dans le résumé.
+- **Chiffres** : relus dans Google Forms le 28/10 : « more than 400 people » sur le programme, « more than 160 » formées par Paul, 4.91/5 sur 142 notes, 142/142 recommandent.
+- **Le Wagon** : intitulé exact du titre RNCP 38616, dans l'entrée 2024. Retiré d'Education (doublon).
+- **IDRAC** : pièce officielle relue : titre AIPF niveau I (7 européen), pas un Master 2. Écrit « Master's-level degree (French RNCP Level 7) » + intitulé exact.
+- **Certifications** : DataCamp retiré (Paul) ; Cisco Networking Basics (2025) ajouté ; IBM gardé.
+
+---
+
 ## 2026-10-28 — Refonte neutre du CV public
 
 - **Demande de Paul** : CV public neutre, actualisé avec ses dernières candidatures, branding neutre (plus la charte Data Inceptio).
