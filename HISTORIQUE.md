@@ -1,7 +1,18 @@
-# Historique — CV Data Inceptio
+# Historique — CV public
 
 > Ce fichier est mis à jour automatiquement par Claude Code à chaque session de travail.
 > Ne pas supprimer les entrées existantes.
+
+---
+
+## 2026-10-28 — Refonte neutre du CV public
+
+- **Demande de Paul** : CV public neutre, actualisé avec ses dernières candidatures, branding neutre (plus la charte Data Inceptio).
+- **Fait** : `index.html` refait sur le gabarit une colonne du skill `cv-candidature-pro`, en anglais, une page A4, lisible sur téléphone ; `Paul_Frette_CV.pdf` généré depuis la même page (lien « Download PDF »).
+- **Contenu** : repris du CV Salesforce du 23/10 et des CV Alan / Mistral du 17/10 ; ajout des directeurs de la Région formés en octobre 2026 et des lignes 2024 validées par Paul le 17/10 (bootcamp, rénovation).
+- **Retiré de la version publique** : téléphone, section « Engagement filière musicale », nom de la Région, item de roadmap du vendeur de la plateforme, charte Data Inceptio.
+- **Contre-expertise** : `claude_ask.py --tier decision` (Fable 5.1). Retenu : trou 2024 comblé, résumé réécrit (valeur actuelle d'abord), moins de noms de produits, roadmap tierce retirée, Région anonymisée, « Signify (formerly Philips Lighting) ». Non retenu : arrondir les chiffres vérifiés, changer les intitulés sans comparer à LinkedIn, ajouter « open to Paris / remote » (non validé par Paul).
+- **Piège** : le PDF du 23/10 tenait sur une page parce que la ligne de contact (avec le téléphone) dépassait et faisait réduire la page par Chrome (~0,96). Sans le téléphone, l'échelle est posée en `zoom: 0.96` dans `@media print`.
 
 ---
 
@@ -48,5 +59,7 @@
 ## En attente
 
 - [ ] Ajouter les notes d'évaluation des formations IA clients (scores à fournir par Paul)
-- [ ] Ajouter URL LinkedIn dans le header (si souhaité)
+- [x] Ajouter URL LinkedIn dans le header (fait 2026-10-28)
 - [x] Ajouter section "Engagement filière musicale" pour annexion CRT CNM (fait 2026-04-27)
+- [ ] Trou juin–novembre 2025 : à couvrir si Paul a un fait à mettre (rien dans les faits vérifiés)
+- [ ] Intitulés à comparer avec LinkedIn (« Data Architect », « CRM Data Analyst »)
