@@ -9,7 +9,7 @@
   /* Gabarit neutre une colonne (skill cv-candidature-pro, 04/10/2026) : fond blanc, texte sombre,
      un seul accent, rubriques standard. Même fichier pour l'écran (feuille centrée, lisible sur
      téléphone) et pour l'impression A4 (PDF généré par Chrome headless). */
-  @page { size: A4; margin: 13mm 15mm 12mm; }
+  @page { size: A4; margin: 11mm 14mm 10mm; }
   :root { --ink: #1b1b1b; --muted: #4a4a4a; --accent: #1f3a5f; --rule: #c9d1db; --page-bg: #eef1f4; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { background: var(--page-bg); }
@@ -65,6 +65,7 @@
     h2 { font-size: 13px; margin-top: 18px; }
     .job-head { flex-direction: column; gap: 0; }
     .dates, .project .link { font-size: 13px; }
+    .project .link a { overflow-wrap: anywhere; }
     .two { flex-direction: column; gap: 0; }
     .download { text-align: left; font-size: 14px; margin-bottom: 12px; }
   }
@@ -74,7 +75,7 @@
   @media print {
     html { background: #fff; }
     body { max-width: none; margin: 0; padding: 0; box-shadow: none; font-size: 9.7pt;
-           zoom: 0.96; }
+           zoom: 0.94; }
     .download { display: none; }
   }
 </style>
@@ -90,9 +91,10 @@
 </header>
 
 <h2>Summary</h2>
-<p>I help organizations adopt AI: I build RAG and AI-agent solutions, and I design and deliver GenAI adoption programs for
-public and private clients. Before that, seven years at Signify in enterprise accounts and product
-management, including a national CRM enablement program: turning a new tool into everyday use.</p>
+<p>I help organizations adopt AI: I configure and deploy AI agents on an enterprise
+platform, build the data pipelines and internal tools around them, and I designed the GenAI adoption program that has trained
+more than 400 people (160+ by me). Before that, seven years at Signify in enterprise accounts and product management, including
+the national Salesforce CRM enablement program that turned a new tool into everyday use for 80 sales reps.</p>
 
 <h2>Experience</h2>
 
@@ -102,10 +104,10 @@ management, including a national CRM enablement program: turning a new tool into
     <div class="dates">Nov 2025 – Present</div>
   </div>
   <ul>
-    <li>Design data architectures (ELT on GCP, Azure, AWS) and build RAG and AI-agent solutions for client organizations, mostly on an enterprise AI-agent platform.</li>
-    <li>Designed a GenAI adoption program used to train more than 400 people; personally trained more than 160, from SME teams to the managers and directors of a French regional government (teaching quality 4.91/5 across 142 ratings, 142/142 would recommend).</li>
-    <li>Built and run a production training-analytics app (Streamlit, Plotly, Google Sheets API) for 12 client organizations, with a Claude-powered assistant; first version built with Claude Code in two days.</li>
-    <li>Wrote product feedback, with a working prototype, to the vendor of the AI-agent platform I teach.</li>
+    <li>Design data pipelines (ELT on GCP) and configure, deploy and support RAG-based AI agents for client organizations on an enterprise AI-agent platform.</li>
+    <li>Designed the GenAI adoption program delivered by our trainers to more than 400 people; personally trained more than 160, from SME teams to the managers and directors of a French regional government (trainer rating 4.91/5 across 142 evaluations; 142/142 would recommend the program).</li>
+    <li>Built and operate the internal training-analytics app (Python, Streamlit, Plotly, Google Sheets API) that tracks feedback from 12 client organizations, with an LLM assistant served through the same platform.</li>
+    <li>Wrote product feedback to the vendor of the platform I teach, with a working prototype.</li>
   </ul>
 </div>
 
@@ -126,8 +128,7 @@ management, including a national CRM enablement program: turning a new tool into
     <div class="dates">2024</div>
   </div>
   <ul>
-    <li>Le Wagon, Nantes: full-time Data Analytics bootcamp (Oct–Dec 2024), then Teaching Assistant (December 2024). French RNCP Level 6 qualification <i>Concepteur développeur en intelligence artificielle et analyse big data</i> (AI and big data developer, RNCP 38616), awarded January 2025.</li>
-    <li>Renovated an apartment end to end as owner and project lead (plans, nine contractors, site follow-up); rented since 2025.</li>
+    <li>Le Wagon, Nantes: full-time Data Analytics bootcamp (Oct–Dec 2024), then Teaching Assistant (December 2024).</li>
   </ul>
 </div>
 
@@ -152,33 +153,31 @@ management, including a national CRM enablement program: turning a new tool into
   </ul>
 </div>
 
-<h2>Project</h2>
+<h2>Projects</h2>
 <div class="project">
-  <div><span class="name">Personal always-on AI agent</span></div>
-  <div class="link">Public architecture: <a href="https://github.com/paulfrettepro-collab/personal-ai-system-showcase">github.com/paulfrettepro-collab/personal-ai-system-showcase</a></div>
+  <div><span class="name">Personal always-on AI agent</span> <span class="link">· <a href="https://github.com/paulfrettepro-collab/personal-ai-system-showcase">github.com/paulfrettepro-collab/personal-ai-system-showcase</a></span></div>
   <ul>
-    <li>Built on Claude Code and driven by voice from Telegram since April 2026: hooks and MCP servers for mail, calendar and browser tasks, persistent memory, a watchdog and an automatic model fallback. Used daily.</li>
+    <li>Built on Claude Code and driven by voice from my phone since April 2026: hooks and MCP servers for mail, calendar and browser tasks, three-layer persistent memory, an independent watchdog (15+ health checks), automatic model fallback; every incident ends in a written post-mortem (11 to date). Used daily.</li>
+    <li>Two native macOS bricks in Swift, each with a public showcase: a floating assistant measured at 0.4–0.8 s to first token, and local-first dictation on whisper.cpp (Metal) (audio never leaves the machine), stop-to-text latency cut from 3.1 s to 1.5 s.</li>
+  </ul>
+</div>
+<div class="project">
+  <div><span class="name">ELT pipeline on BigQuery</span> <span class="link">· <a href="https://github.com/paulfrettepro-collab/battlefield_meta_aggregator">github.com/paulfrettepro-collab/battlefield_meta_aggregator</a></span></div>
+  <ul>
+    <li>Public code: scraping, medallion architecture, 44 dbt tests, CI/CD on GitHub Actions, zero infrastructure cost.</li>
   </ul>
 </div>
 
 <h2>Skills</h2>
 <div class="skills">
   <p><b>AI &amp; LLM:</b> Claude API, Claude Code, MCP, RAG, AI agents, prompt and context engineering, enterprise AI-agent platforms (Swiftask, Microsoft Copilot)</p>
-  <p><b>Data &amp; cloud:</b> Python, SQL, dbt, Airflow, BigQuery, PostgreSQL, GCP, Docker, Git, GitHub Actions</p>
+  <p><b>Data &amp; cloud:</b> Python, SQL, dbt, Airflow, BigQuery, PostgreSQL, GCP, Docker, Git, GitHub Actions, Swift (macOS), speech-to-text (whisper.cpp)</p>
   <p><b>Customer-facing:</b> AI adoption programs and training design, discovery and workshop facilitation, C-level communication, change management, Salesforce CRM</p>
+  <p><b>Languages:</b> French (native), English (C1)</p>
 </div>
 
-<div class="two">
-  <div>
-    <h2>Education</h2>
-    <p><b>Master's-level degree (French RNCP Level 7)</b>, <i>Manager de la stratégie commerciale et marketing</i>, digital marketing specialization<br><span class="small">IDRAC Business School, Nantes · 2018</span></p>
-  </div>
-  <div>
-    <h2>Certifications &amp; languages</h2>
-    <p>Cisco Networking Academy, Networking Basics (2025)</p>
-    <p>IBM (Coursera), Introduction to Data Engineering (2025)</p>
-    <p style="margin-top:4pt">French (native) · English (C1)</p>
-  </div>
-</div>
+<h2>Education</h2>
+<p><b>AI &amp; Big Data Developer, French RNCP Level 6</b> (RNCP 38616) · Le Wagon, Nantes · 2025</p>
+<p><b>Master's-level degree, French RNCP Level 7</b>, <i>Manager de la stratégie commerciale et marketing</i> · IDRAC, Nantes · 2018</p>
 </body>
 </html>
